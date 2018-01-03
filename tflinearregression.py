@@ -19,7 +19,7 @@ def linear_regression():
     x=tf.placeholder(tf.float32,shape=(None,),name='x')
     y=tf.placeholder(tf.float32,shape=(None,),name='y')
     #variable sharing
-    with tf.varibale_scope('lreg') as scope:
+    with tf.variable_scope('lreg') as scope:
         w=tf.Variable(np.random.normal(),name='W')
         y_pred=tf.multiply(w,x)
         
